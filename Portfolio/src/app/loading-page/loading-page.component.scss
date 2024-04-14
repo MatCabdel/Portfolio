@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0 auto;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInAnimation 4s ease forwards;
+}
+
+.container-loading-page {
+  background: linear-gradient(to bottom right, #2c3048, #8d91b1);
+  min-height: 100vh;
+  color: #907a61;
+  display: flex;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .title-name {
+    text-align: center;
+    align-self: center;
+
+
+    h1 {
+      text-align: center;
+      font-size: 8em;
+      text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.384);
+    }
+    p {
+      text-align: center;
+      font-size: 1.7em;
+      color: white;
+      background-color: #907a61;
+      padding: 5px 0;
+      border-radius: 5px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 8em;
+      text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.384);
+    }
+  }
+}
