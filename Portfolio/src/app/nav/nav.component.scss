@@ -1,0 +1,63 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container-nav {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+
+  .nav-part {
+    height: 100%;
+    display: flex;
+    margin-right: 20px;
+  }
+
+  .nav-part ul {
+    display: flex;
+    flex-direction: wrap;
+    list-style: none;
+    gap: 20px;
+    color: white;
+    align-items: center;
+    font-size: 1.1em;
+
+    li {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px; /* Ajuste cette valeur selon la sous-ligne souhaitée */
+        width: 0; /* Initialiser la largeur à 0 */
+        height: 2px; /* Ajuste cette valeur selon l'épaisseur de la sous-ligne souhaitée */
+        background-color: white; /* ou toute autre couleur souhaitée */
+        transition: width 0.3s ease; /* Ajouter une transition pour la largeur */
+      }
+
+      &:hover::after {
+        width: 100%; /* Faire apparaître le soulignement en augmentant la largeur à 100% */
+      }
+    }
+
+    #CV {
+      border: 2px solid #907a61;
+      padding: 5px 15px;
+      border-radius: 20px;
+    }
+  }
+
+  .logo-part {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 5px;
+
+    img {
+      height: 70%;
+    }
+  }
+}

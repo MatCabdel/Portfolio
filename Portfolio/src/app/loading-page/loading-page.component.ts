@@ -1,6 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-loading-page',
@@ -16,14 +15,13 @@ import { Router } from '@angular/router';
   ]
 })
 export class LoadingPageComponent implements OnInit {
-  constructor(private router: Router) { }
+  constructor() { }
   showText: boolean = false;
  
 
   ngOnInit(): void {
     setTimeout(() => {
       this.showText = true;
-      this.router.navigate(['/home']);
     }, 4000); // délai en millisecondes
   }
 }
